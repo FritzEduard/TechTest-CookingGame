@@ -5,6 +5,7 @@ public class KnifeController : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         Ingredient ingredient = collision.gameObject.GetComponentInParent<Ingredient>();
+
         if (ingredient == null) return;
 
         if (!ingredient.IngredientSO.IsCuttable) return;
